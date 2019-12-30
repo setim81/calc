@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<title>Калькуляторы на JavaScript</title>
+</head>
+<body>
+	<div class='wrapper'>
+		<div class="frame">
+			<h2>Простой калькулятор</h2>
+			<p>при вводе дробных чисел используйте точку</p>
+
+				<form>
+					<table>
+						<tr>
+							<td>
+								<input class="input_area" type="text" value="" placeholder="Введите число" id="first">
+									
+										<select class="input_area_oper" name="select" id="select">
+											  <option>+</option>
+						  					  <option>-</option>
+						  					  <option>*</option>
+						  					  <option>/</option>
+						  					  <option>%</option>
+						  					  <option>cтепень n</option>
+						  					  <option>корень степени n</option>
+										</select>
+								
+								
+								<input class="input_area" type="text" value="" placeholder="Введите число" id="second">  
+								<input class="button" onclick="countCalc()" type="button" value="Рассчитать">
+								<input class="button"  onclick="resetResCalc()" type="button" value="Сбросить">
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<h3>Результат</h3>
+								<div id="result"></div> <!-- в этот блок выводим результат подсчета из js-->
+							</td>
+						</tr>
+					</table>
+				</form>
+			<p>(c) coded by Tim 20/12/2019</p>
+		</div>
+		<div class="frame_ipo">
+			<h2>Ипотечный калькулятор для расчета аннуитентныx платежей</h2>
+			<form>
+				<div class="column">
+					<div class="column_div">
+						<h4>Общая стоимость жилья</h4>
+						<input class="input_area" type="text" oninput="rngPriceChange()" value="" placeholder="Введите число" id="i_price">
+						<input class="" type="range" oninput="rngPrice()" min="1000000" max="200000000" step="100000"  id="rng_price" >
+					</div>
+					<div class="column_div">
+						<h4>Первоначальный взнос</h4>
+						<input class="input_area" type="text" oninput="rngInitChange()" value="" placeholder="Введите число" id="i_init">
+						<input class="" type="range" oninput="rngInit()" min="1000000" max="100000000" step="100000"  id="rng_init">
+					</div>
+
+					<div class="column_div">
+						<h4>Сумма кредита</h4>
+						<div id="ipo_credit"></div>
+					</div>
+					<div class="column_div">
+						<h4>Процентная ставка</h4>
+						<input class="input_area" type="text" oninput="rngPercChange()" value="" placeholder="" id="i_perc">
+						<input class="" type="range" oninput="rngPerc()" min="1" max="30" step="0.1"  id="rng_perc">
+					</div>
+					<div class="column_div">
+						<h4>Срок кредита (лет)</h4>
+						<input class="input_area" type="text" oninput="rngPeriodChange()" value="" placeholder="" id="i_period">
+						<input class="" type="range" oninput="rngPeriod()" min="1" max="30" step="1"  id="rng_period">
+					</div>
+					
+				</div>
+				<div class="column">					
+					<div class="ipo_res">
+						<div class="ipo_attr">
+							<h3>Ежемесячный платеж</h3>
+							<div id="ipo_month"></div> <!-- в этот блок выводим результат подсчета из js-->
+						</div>
+						<div class="ipo_attr">
+							<h3>Переплата по кредиту с учетом %</h3>
+							<div id="ipo_total"></div>
+						</div>
+						<div class="ipo_attr">
+							<h3>Суммарная стоимость жилья с учетом выплат по кредиту</h3>
+							<div id="ipo_overpay"></div>
+						</div>
+						
+					</div>
+					<div class="ipo_buttons_block">
+						<input class="ipo_button" onclick="countIpoCalc()" type="button" value="Рассчитать">
+						<input class="ipo_button"  onclick="resetResIpoCalc()" type="button" value="Сбросить">	
+					</div>
+					
+				</div>
+				<p>(c) coded by Tim 23/12/2019</p>
+			</form>
+		</div>
+	</div>
+<script type="text/javascript" src='calc.js'></script>	
+</body>
+</html>

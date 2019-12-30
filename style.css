@@ -1,0 +1,304 @@
+h2, h3, h4, p{
+	margin: 10px;
+	font-family: Geneva, Arial, Helvetica, sans-serif;
+	color: white;
+}
+h2{
+	color: #faf593;
+}
+h4{
+	font-size: 16px;
+	font-weight: normal;
+}
+p{
+	margin: 15px 0 0 10px;
+	font-size: 14px;
+	text-align: left;
+}
+.frame p{
+	margin-bottom: 10px;
+}
+.wrapper{
+	display: block;
+	width: 70%;
+	margin: 0 auto;
+}
+.frame{
+	margin-top: 20px;
+	padding: 20px;
+	border-radius: 15px;
+	background-color: #205236;
+	-webkit-box-shadow: 10px 10px 51px -18px rgba(0,0,0,0.75);
+}
+.frame_ipo{
+	margin-top: 15px;
+	padding: 20px;
+	border-radius: 15px;
+	background-color: #5c5c5c;
+	-webkit-box-shadow: 10px 10px 51px -18px rgba(0,0,0,0.75);
+}
+.column{
+	display: flex;
+	flex-direction: row;
+		
+}
+
+
+/* меняем стандартный вид select */
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  outline: 0;
+  box-shadow: none;
+  border: 0 !important;
+  background: #2c3e50;
+  background-image: none;
+}
+/* Remove IE arrow */
+select::-ms-expand {
+  display: none;
+}
+/* Custom Select */
+#select {
+  width: 10.2em;
+  height: 2.2em;
+  line-height: 2;
+  background: #fff;
+  overflow: hidden;
+  border-radius: 2.25em;
+}
+select {
+  flex: 1;
+  padding: 0 .5em;
+  color: black;
+  cursor: pointer;
+}
+/* Arrow */
+#select::after {
+  content: '\25BC';
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0 1em;
+  background: #34495e;
+  cursor: pointer;
+  pointer-events: none;
+  -webkit-transition: .25s all ease;
+  -o-transition: .25s all ease;
+  transition: .25s all ease;
+}
+/* Transition */
+#select:hover::after {
+  color: #f39c12;
+}
+
+/* меняем стандартный вид input */
+.input_area{
+	padding: 0 10px;
+	height: 30px;
+	width: 150px;
+	font-family: Geneva, Arial, Helvetica, sans-serif;
+	font-size: 20px;
+	margin-bottom: 10px;
+	border: 1px solid grey;
+	border-radius: 15px;
+}
+.input_area:focus{ 
+	border-color: yellow; 
+}
+.input_area_oper{
+	padding: 0 10px;
+	height: 30px;
+	width: 150px;
+	font-family: Geneva, Arial, Helvetica, sans-serif;
+	font-size: 15px;
+	font-weight: bold;
+	margin-bottom: 10px;
+	border: 1px solid grey;
+}
+
+#result {
+	padding: 10px 7px 7px 10px;
+	height: 30px;
+	width: auto;
+	max-width: 380px;
+	font-family: Geneva, Arial, Helvetica, sans-serif;
+	font-size: 28px;
+	background-color: white;
+	margin-bottom: 10px;
+	border: 1px solid #205236;
+	border-radius: 15px;
+}
+
+#i_perc, #i_period, #rng_perc, #rng_period{
+	max-width: 50px;
+}
+.column_div{
+	padding: 10px;
+	width: 40%;
+}
+.column_div h4{
+	color:#ffffff;
+}
+
+/*оформление ползунков */
+ input {
+ 	height: 4px;
+ 	
+ }
+/*для Mozilla*/
+input[type=range]::-moz-range-thumb {
+  
+  border: 1px solid #292727;
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  background: #ffffff;
+  cursor: pointer;
+}
+
+input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 4px;
+  cursor: pointer;
+  background: #292727;
+ }
+
+  /*для Chrome*/ 
+input[type=range]::-webkit-slider-thumb {
+   -webkit-appearance: none;
+  border: 1px solid #292727;
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  background: #ffffff;
+  margin-top: -7px;
+  cursor: pointer;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  
+  width: 100%;
+  height: 4px;
+  cursor: pointer;
+  background: #292727;
+}
+
+input[type=range] {
+  -webkit-appearance: none; /* Скрывает слайдер, чтобы можно было создать свой */
+  width: 100%; /* Указание параметра ширины требуется для Firefox. */
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+
+input[type=range]:focus {
+  outline: none; /* Убирает голубую границу у элемента */
+}
+
+input[type=range]::-ms-track {
+  width: 100%;
+  cursor: pointer;
+  background: transparent; /* Скрывает слайдер, чтобы можно было добавить собственные стили. */
+  border-color: transparent;
+  color: transparent;
+}
+
+.button {
+	height: 33px;
+	width: 120px;
+	font-family: Geneva, Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	margin-left: 15px;
+	margin-bottom: 10px;
+	background-color:green;
+	border: 1px solid green;
+	border-radius: 15px;
+	color: 	white;
+	cursor: pointer;
+}
+
+.button:hover {
+	background-color: #16b55c;
+	color: white;
+}
+
+#ipo_credit{
+	margin: 30px 20px 0 0;
+	font-family: Geneva, Arial, Helvetica, sans-serif;
+	font-size: 26px;
+	font-weight: bold;
+	text-align: center;
+	color: yellow;
+}
+
+.ipo_button {
+	height: 40px;
+	width: 120px;
+	font-family: Geneva, Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	margin-left: 15px;
+	margin-bottom: 10px;
+	background-color:#1f2a2e;
+	border: 1px solid #1f2a2e;
+	border-radius: 15px;
+	color: 	white;
+	cursor: pointer;
+}
+
+.ipo_button:hover {
+	background-color: #05152b;
+	color: white;
+}
+
+.ipo_buttons_block{
+	margin: 20px;
+	
+}
+
+.ipo_res{
+	display: flex;
+	flex-direction: row;
+	margin-top: 20px;
+}
+
+.ipo_attr{
+	border-radius: 10px;
+	margin-left: 20px;
+	width: auto;
+	flex-direction: row;
+	padding: 0 10px;
+	-webkit-box-shadow: 10px 10px 51px -18px rgba(0,0,0,0.65);
+}
+.ipo_attr:first-child{
+	margin-left: 0px;
+}
+
+#ipo_month, #ipo_total, #ipo_overpay{
+	height: 30px;
+	margin: 20px 5px;
+	font-family: Geneva, Arial, Helvetica, sans-serif;
+	font-size: 28px;
+	text-align: center;
+	font-weight: bold;
+	color: yellow;
+}
+
+
+@media screen and (max-width: 1200px) {
+    .column {
+		flex-direction: column;
+   }
+
+   .ipo_res{
+   		flex-direction: column;
+   }
+   .ipo_attr{
+   	margin: 6px;
+	width: auto;
+	-webkit-box-shadow: -6px -1px 29px 0px rgba(0,0,0,0.25);
+   }
+   
