@@ -1,13 +1,13 @@
 //--------------- Обычный калькулятор ----------------------------------------
 	function countCalc(){
 		
-		var firstNum = + document.getElementById("first").value; // "+" перобразует значение value в число
-		var secondNum = + document.getElementById("second").value;
+		let firstNum = + document.getElementById("first").value; // "+" перобразует значение value в число
+		let secondNum = + document.getElementById("second").value;
 	
-		var oper = document.getElementById("select").selectedIndex; // забираем индекс элемента массива option (0 = + ,1 = -,2 = *,3 = /, 4 = %, 5 = Степень n, 6 = Корень степени n) тега select
+		let oper = document.getElementById("select").selectedIndex; // забираем индекс элемента массива option (0 = + ,1 = -,2 = *,3 = /, 4 = %, 5 = Степень n, 6 = Корень степени n) тега select
 
 		if (oper === 0){
-			var res = firstNum + secondNum;
+			let res = firstNum + secondNum;
 		}else if (oper === 1){
 			res = firstNum - secondNum;
 		}else if (oper === 2) {
@@ -34,14 +34,14 @@
 
 //--------------- Ипотечный калькулятор ----------------------------------------
 
-	 var rng_price=document.getElementById('rng_price'); //rng - это ползунок
-  	 var i_price=document.getElementById('i_price'); // i - input
-  	 var rng_init=document.getElementById('rng_init');
-	 var i_init=document.getElementById('i_init');
-	 var rng_perc=document.getElementById('rng_perc');
-	 var i_perc=document.getElementById('i_perc');
-	 var rng_period=document.getElementById('rng_period');
-	 var i_period=document.getElementById('i_period');
+	 let rng_price=document.getElementById('rng_price'); //rng - это ползунок
+  	 let i_price=document.getElementById('i_price'); // i - input
+  	 let rng_init=document.getElementById('rng_init');
+	 let i_init=document.getElementById('i_init');
+	 let rng_perc=document.getElementById('rng_perc');
+	 let i_perc=document.getElementById('i_perc');
+	 let rng_period=document.getElementById('rng_period');
+	 let i_period=document.getElementById('i_period');
 
 
 	function rngPrice() {
@@ -78,7 +78,7 @@
 
 	function countIpoCalc(){
 		
-		var ipo_diff = i_price.value - i_init.value; //остаток, на который берется кредит
+		let ipo_diff = i_price.value - i_init.value; //остаток, на который берется кредит
 
 			if(ipo_diff <= 0){ 	//проверка, если остаток меньше или равен нулю
 				document.getElementById("ipo_credit").innerHTML = 'не требуется'; //выводим надпись и	
@@ -86,17 +86,17 @@
 			}else{
 				document.getElementById("ipo_credit").innerHTML = ipo_diff.toFixed(0).replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 ');
 			};
-		var percent = (i_perc.value/12)/100; //ставка в месяц
+		let percent = (i_perc.value/12)/100; //ставка в месяц
 		
 		// формула рассчета ежемес.платежа
-		var ipo_month = ipo_diff*(percent * (Math.pow(1 + percent, i_period.value * 12))) / (Math.pow(1 + percent, i_period.value * 12) - 1);
+		let ipo_month = ipo_diff*(percent * (Math.pow(1 + percent, i_period.value * 12))) / (Math.pow(1 + percent, i_period.value * 12) - 1);
 		document.getElementById("ipo_month").innerHTML = ipo_month.toFixed(0).replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 '); //шаблон метода replace в данном случае ставит пробелы между разрядами чисел, например .toFixed(2) оставляет два знака после запятой
 		
-		var ipo_total = ipo_month*12*(+i_period.value) - ipo_diff; //полные затраты по кредиту
+		let ipo_total = ipo_month*12*(+i_period.value) - ipo_diff; //полные затраты по кредиту
 
 		document.getElementById("ipo_total").innerHTML = ipo_total.toFixed(0).replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 ');
 			
-		var ipo_overpay = ipo_total + (+i_price.value);    //величина переплаты
+		let ipo_overpay = ipo_total + (+i_price.value);    //величина переплаты
 		document.getElementById("ipo_overpay").innerHTML = ipo_overpay.toFixed(0).replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 '); 
 	};
 	
